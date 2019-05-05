@@ -2,17 +2,17 @@
 
 // GOAL: calculate nightly charge for babysitter
 
-// TODO: return pre-bedtime hourly charge based on which family was input
+// TODO: return correct pre-bedtime hourly charge for family that is input
 
-const calculateCharge = (input) => {
-  if(input === 'A') {
-    return 15;
-  } else if(input === 'B') {
-    return 12;
-  } else if(input === 'C') {
-    return 21;
+const calculateCharge = (family, hours) => {
+  if(family === 'A') {
+    return 15 * hours;
+  } else if(family === 'B') {
+    return 12 * hours;
+  } else if(family === 'C') {
+    return 21 * hours;
   }
-  return input;
+  return family;
 }
 
 module.exports = {
