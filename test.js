@@ -23,3 +23,8 @@ it('should calculate correct total (first price-tier based) charge based on inpu
   assert.equal(test.calculateCharge('B', 4), 48);
   assert.equal(test.calculateCharge('C', 3), 63);
 });
+
+it('should calculate number of hours worked before 10:00', () => {
+  assert.equal(test.calculateHours('5:00', '9:00'), 4);
+  assert.equal(test.calculateHours('5:00', '6:00'), 1);
+});

@@ -2,7 +2,7 @@
 
 // GOAL: calculate nightly charge for babysitter
 
-// TODO: return correct pre-bedtime hourly charge for family that is input
+// TODO: return correct total (first price-tier based) charge based on input of family and number of hours
 
 const calculateCharge = (family, hours) => {
   if(family === 'A') {
@@ -15,6 +15,11 @@ const calculateCharge = (family, hours) => {
   return family;
 }
 
+// TODO: return hours worked
+const calculateHours = (start, end) => {
+  return end[0] - start[0];
+}
+
 module.exports = {
-  calculateCharge
+  calculateCharge, calculateHours
 };
