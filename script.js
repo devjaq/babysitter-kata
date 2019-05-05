@@ -47,10 +47,9 @@ const C = [
   { "time": "4:00", "charge": 15 },
 ];
 
-// TODO: return correct total (first price-tier based) charge based on input of family and number of hours
-
-let family;
-const calculateCharge = (familyInput, hours) => {
+// TODO: return charge for hours worked
+const calculateCharge = (familyInput, start, end) => {
+  let family;
   if (familyInput === 'A') {
     family = A;
   } else if (familyInput === 'B') {
@@ -58,27 +57,15 @@ const calculateCharge = (familyInput, hours) => {
   } else if (familyInput === 'C') {
     family = C;
   }
-  return family[0].charge * hours;
-}
-
-// TODO: return hours worked
-const calculateHours = (familyInput, start, end) => {
-  if (familyInput === 'A') {
-    family = A;
-  } else if (familyInput === 'B') {
-    family = B;
-  } else if (familyInput === 'C') {
-    family = C;
-  }
-  let hoursCounter = 0;
+  let totalCharge = 0;
   for (let i = 0; i < family.length; i++) {
     if (family[i].time === start) {
       let startTime = family[i].time;
       for (let j = i; j < family.length; j++) {
         if (family[j].time === end) {
-          return hoursCounter;
+          return totalCharge;
         } else {
-          hoursCounter += 1;
+          totalCharge += family[j].charge;
         }
       }
     }
@@ -86,5 +73,5 @@ const calculateHours = (familyInput, start, end) => {
 }
 
 module.exports = {
-  calculateCharge, calculateHours
+  calculateCharge
 };
