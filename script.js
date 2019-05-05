@@ -1,7 +1,7 @@
 'use strict';
 
-const answer = () => {
-  return 1;
+const answer = (input) => {
+  return input;
 }
 
 module.exports = {
