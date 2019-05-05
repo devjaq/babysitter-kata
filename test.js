@@ -15,3 +15,7 @@ it('should return input', () => {
 it('should return 15 when A is input', () => {
   assert.equal(test.calculateCharge('A'), 15)
 });
+
+it('should return 12 when B is input', () => {
+  assert.equal(test.calculateCharge('B'), 12)
+});

@@ -7,6 +7,8 @@
 const calculateCharge = (input) => {
   if(input === 'A') {
     return 15;
+  } else if(input === 'B') {
+    return 12;
   }
   return input;
 }
