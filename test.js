@@ -12,10 +12,8 @@ it('should return input', () => {
   assert.equal(test.calculateCharge(2), 2);
 });
 
-it('should return 15 when A is input', () => {
-  assert.equal(test.calculateCharge('A'), 15)
-});
-
-it('should return 12 when B is input', () => {
-  assert.equal(test.calculateCharge('B'), 12)
+it('should return correct pre-bedtime hourly charge when family is input', () => {
+  assert.equal(test.calculateCharge('A'), 15);
+  assert.equal(test.calculateCharge('B'), 12);
+  assert.equal(test.calculateCharge('C'), 21);
 });

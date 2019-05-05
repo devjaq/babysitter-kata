@@ -9,6 +9,8 @@ const calculateCharge = (input) => {
     return 15;
   } else if(input === 'B') {
     return 12;
+  } else if(input === 'C') {
+    return 21;
   }
   return input;
 }
