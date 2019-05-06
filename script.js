@@ -51,20 +51,24 @@ let family;
 // TODO: return charge for hours worked
 const calculateCharge = (familyInput, start, end) => {
   family = processFamilyInput(familyInput);
-
   let totalCharge = 0;
   for (let i = 0; i < family.length; i++) {
     if (family[i].time === start) {
+      console.log(family[i].time);
+      
       let startTime = family[i].time;
       for (let j = i; j < family.length; j++) {
         if (family[j].time === end) {
+          console.log(family[j].time);
           return totalCharge;
+        } else if (j == family.length - 1) {
+          return "please double check your start and end times and try again";
         } else {
           totalCharge += family[j].charge;
         }
       }
-    }
-  }
+    } 
+  } 
 }
 
 const processFamilyInput = (familyInput) => {
