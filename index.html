@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <form>
+        <!-- <form action="form-handler.js" method="POST"> -->
+
+      <!-- <input type="text" name="total" id="total" value="Total charge = " disabled> -->
+      <textarea name="total" id="total" disabled cols="25" rows="5">Total charge = </textarea>
+      <h1>Babysitter's Calculator</h1>
+      <label for="family">Select Family ID</label>
+      <select name="family" id="family">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+      </select>
+      <label for="start">Start Time</label>
+      <select name="start" id="start">
+        <option value="5:00 PM">5:00 PM</option>
+        <option value="6:00 PM">6:00 PM</option>
+        <option value="7:00 PM">7:00 PM</option>
+        <option value="8:00 PM">8:00 PM</option>
+        <option value="9:00 PM">9:00 PM</option>
+        <option value="10:00 PM">10:00 PM</option>
+        <option value="11:00 PM">11:00 PM</option>
+        <option value="12:00 AM">12:00 AM</option>
+        <option value="1:00 AM">1:00 AM</option>
+        <option value="2:00 AM">2:00 AM</option>
+        <option value="3:00 AM">3:00 AM</option>
+      </select>
+      <label for="end">End Time</label>
+      <select name="end" id="end">
+          <option value="6:00 PM">6:00 PM</option>
+          <option value="7:00 PM">7:00 PM</option>
+          <option value="8:00 PM">8:00 PM</option>
+          <option value="9:00 PM">9:00 PM</option>
+          <option value="10:00 PM">10:00 PM</option>
+          <option value="11:00 PM">11:00 PM</option>
+          <option value="12:00 AM">12:00 AM</option>
+          <option value="1:00 AM">1:00 AM</option>
+          <option value="2:00 AM">2:00 AM</option>
+          <option value="3:00 AM">3:00 AM</option>
+          <option value="4:00 AM">4:00 AM</option>
+        </select>
+      <button type="button" onclick="formClick()">Calculate</button>
+    </form>
+  </body>
+  <!-- <script src="script.js"></script> -->
+
+  <script src="script.js"></script>
+  <script src="form-handler.js"></script>
+</html>
